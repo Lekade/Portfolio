@@ -1,28 +1,11 @@
 import './App.css';
+import {Header} from "./layouts/header/Header";
 
 
 function App() {
     return (
         <div className="appWrapper">
-            <header>
-                <div className="logo">Lekade</div>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">About me</a>
-                        </li>
-                        <li>
-                            <a href="#">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+            <Header/>
             <main>
                 <section className="intro">
                     <div className="container">
