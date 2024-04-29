@@ -10,7 +10,7 @@ import {Footer} from "./layouts/footer/Footer";
 
 function App() {
     return (
-        <div className="appWrapper">
+        <div className="app">
             <Header/>
             <main>
                 <Intro/>
