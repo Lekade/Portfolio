@@ -15,7 +15,7 @@ function App() {
             <main>
                 <Intro/>
                 <TechStack/>
-                <AboutMe/>
+                {/*<AboutMe/>*/}
                 <Projects/>
                 <Contact/>
             </main>

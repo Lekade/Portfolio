@@ -8,9 +8,9 @@ export const Menu = () => {
                 <li>
                     <a href="#">Home</a>
                 </li>
-                <li>
-                    <a href="#">About me</a>
-                </li>
+                {/*<li>*/}
+                {/*    <a href="#">About me</a>*/}
+                {/*</li>*/}
                 <li>
                     <a href="#">Tech Stack</a>
                 </li>
@@ -30,11 +30,11 @@ const StyledMenu = styled.nav`
   align-items: center;
   ul{
     display: flex;
-    gap: 4rem;
+    gap: 40px;
   }
   a{
     color: #fff;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: 500;
   }
 `

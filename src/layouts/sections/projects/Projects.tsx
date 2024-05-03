@@ -1,29 +1,52 @@
 import React from 'react';
+import {Container} from "../../../components/container/Container";
+import {Title} from "../../../components/title/Title";
+import {Subtitle} from "../../../components/subtitle/Subtitle";
+import styled from "styled-components";
+import {Project} from "./Project";
 
 export const Projects = () => {
     return (
-        <section className="projects">
-            <div className="container">
-                <h2>Projects</h2>
-                <span>Things I’ve built so far</span>
-                <div className="ProjectsItems">
-                    <article className="project">
-                        <img src="" alt=""/>
-                        <h3>Project Tile goes here</h3>
-                        <p>This is sample project description random things are here in description
-                            This is sample project lorem ipsum generator for dummy content</p>
-                        <span>Tech stack :</span><span>HTML , JavaScript, SASS, React</span>
-                        <a href="#" className="projectLink">
-                            <img src="" alt="link"/>
-                            <span>Live Preview</span>
-                        </a>
-                        <a href="#" className="projectLink">
-                            <img src="" alt="link"/>
-                            <span>View Code</span>
-                        </a>
-                    </article>
-                </div>
-            </div>
-        </section>
+        <StyledProject>
+            <Container>
+                <Title content="Projects"/>
+                <Subtitle content="Things I’ve built so far"/>
+                <ul>
+                    <li>
+                        <Project/>
+                    </li>
+                    <li>
+                        <Project/>
+                    </li>
+                    <li>
+                        <Project/>
+                    </li>
+                    <li>
+                        <Project/>
+                    </li>
+                    <li>
+                        <Project/>
+                    </li>
+                    <li>
+                        <Project/>
+                    </li>
+                </ul>
+            </Container>
+        </StyledProject>
     );
 };
+
+const StyledProject = styled.section`
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding-bottom: 150px;
+  background-color: blueviolet;
+    ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 65px;
+      padding-top: 113px;
+    }
+`

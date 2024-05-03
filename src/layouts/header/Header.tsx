@@ -1,30 +1,31 @@
 import React from 'react';
 import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
-import {FlexContainer} from "../../components/container/FlexContainer";
+import {Container} from "../../components/container/Container";
 import styled from "styled-components";
 
 export const Header = () => {
     return (
         <StyledHeader>
-            <FlexContainer>
+            <Container>
                 <Logo/>
                 <Menu/>
-            </FlexContainer>
+            </Container>
         </StyledHeader>
     );
 };
 
 const StyledHeader = styled.header`
   width: 100%;
-  height: 10rem;
+  min-height: 90px;
   display: flex;
   align-items: center;
   position: fixed;
   background-color: #1E1E1E;
+  z-index: 2;
   
-  ${FlexContainer}{
+  ${Container}{
+    display: flex;
     justify-content: space-between;
-    
   }
 `
