@@ -22,7 +22,7 @@ const StyledHeader = styled.header`
   align-items: center;
   position: fixed;
   background-color: #1E1E1E;
-  z-index: 2;
+  z-index: 3;
   
   ${Container}{
     display: flex;

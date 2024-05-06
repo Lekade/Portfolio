@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
+import {CircleGlow} from "../../../assets/animations/Animation";
 
 export const Intro = () => {
     return (
@@ -13,6 +14,7 @@ export const Intro = () => {
                         or maybe a turnkey website? Then contact me</p>
                     <button>Contact me</button>
             </Container>
+            <Circle>circle</Circle>
         </IntroStyled>
     );
 };
@@ -25,7 +27,8 @@ const IntroStyled = styled.section`
   background-color: #1E1E1E;
   padding:45vh 0 10vh;
   font-family: "NEXT ART", sans-serif;
-  
+  position: relative;
+    
   ${Container}{
     span{
       font-size: 48px;
@@ -46,6 +49,26 @@ const IntroStyled = styled.section`
       line-height: 28px;
     }
   }
-  
+`
 
+const Circle = styled.div`
+  width: 575px;
+  height: 575px;
+  position: absolute;
+  right: 280px;
+  top: 320px;
+  background-color: transparent;
+  border: 67px solid #00C4F0;
+  border-radius: 50%;
+  color: transparent;
+  font-size: 0;
+  box-shadow:
+          0 0 4px rgba(0,193,236, 1),
+          0 0 4px rgba(0,193,236, 1) inset,
+          0 0 10px rgba(0,193,236, 1),
+          0 0 10px rgba(0,193,236, 1) inset,
+          0 0 20px rgba(0,193,236, 1),
+          0 0 20px rgba(0,193,236, 1) inset;
+
+  animation: ${CircleGlow} 4s ease-in-out infinite;
 `

@@ -41,7 +41,7 @@ const StyledProject = styled.section`
   height: 100%;
   min-height: 100vh;
   padding-bottom: 150px;
-  background-color: blueviolet;
+  background-color: #101010;
     ul{
       display: flex;
       justify-content: space-between;
