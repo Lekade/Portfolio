@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
+import {Icon} from "../../../components/icon/Icon";
+import {btnFormAnimation} from "../../../assets/animations/Animation";
 
 export const Contact = () => {
     return (
@@ -11,22 +13,22 @@ export const Contact = () => {
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="" alt=""/>
+                                <Icon id={'githubWhite'} width={'25px'} height={'25px'}/>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="" alt=""/>
+                                <Icon id={'linkedin'} width={'25px'} height={'25px'}/>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="" alt=""/>
+                                <Icon id={'telegram'} width={'25px'} height={'25px'}/>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="" alt=""/>
+                                <Icon id={'instagram'} width={'25px'} height={'25px'}/>
                             </a>
                         </li>
                     </ul>
@@ -43,9 +45,8 @@ export const Contact = () => {
                     <label >
                         <span>Tell about the project:</span>
                         <textarea placeholder="Message"/>
-                        {/*<input type="text" placeholder="Message"/>*/}
                     </label>
-                    <FormBtn><span>Send</span><img src="" alt="arrow"/></FormBtn>
+                    <FormBtn><span>Send</span><Icon id={'buttonArrow'} width={'20px'} height={'18px'} /></FormBtn>
                 </Form>
             </Container>
         </StyledContact>
@@ -56,7 +57,7 @@ export const Contact = () => {
 const StyledContact = styled.section`
   width: 100%;
   padding: 100px 0;
-  background-color: #000;
+  background-color: #030303;
   ${Container}{
     display: flex;
     justify-content: space-between;
@@ -77,8 +78,8 @@ const ContactInfo = styled.div`
     li{
       width: 25px;
       height: 25px;
-      background-color: #fff;
       border-radius: 50%;
+      cursor: pointer;
     }
     li + li{
       margin-left: 60px;
@@ -142,4 +143,13 @@ const FormBtn = styled.button`
   border: none;
   color: #00C1EC;
   cursor: pointer;
+  span{
+    margin-right: 40px;
+    transition: 1s;
+  }
+  &:hover{
+    span{
+      animation: ${btnFormAnimation} 1s ease-in-out infinite;
+    }
+  }
 `

@@ -61,3 +61,14 @@ export const TurningShakingCube = keyframes`
     transform: rotate(90deg);
   }
 `
+export const btnFormAnimation = keyframes`
+0%{
+  margin-right: 40px;
+}
+50%{
+margin-right: 20px;
+}
+0%{
+margin-right: 40px;
+}
+`

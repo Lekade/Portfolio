@@ -24,7 +24,7 @@ const skilsLeft = [
         heading: 'figma'
     },
     {
-        id:'github',
+        id:'githubColored',
         heading:'github'
     },
     {
@@ -89,18 +89,16 @@ export const TechStack = () => {
                 <Title content={"My Tech Stack"}/>
             <Container>
                 <Icons>
-                    {skilsLeft.map(skill => <li>
+                    {skilsLeft.map((skill, number) => <li key={number}>
                         <Icon id={skill.id} />
                         <h4>{skill.heading}</h4>
                     </li>)}
                 </Icons>
-
                 <CubeBox>
                     <Cube>
                         <div>cube</div>
                     </Cube>
                 </CubeBox>
-
                 <Icons>
                     {skilsRight.map(skill => <li>
                         <Icon id={skill.id} />

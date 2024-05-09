@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
 import {CircleGlow} from "../../../assets/animations/Animation";
+import myPhoto from "../../../assets/images/photo.png"
 
 export const Intro = () => {
     return (
@@ -12,9 +13,10 @@ export const Intro = () => {
                     <p>I've been doing web design, front-end and back-end development
                         for a year now. Do you need a website design, site layout,
                         or maybe a turnkey website? Then contact me</p>
-                    <button>Contact me</button>
+                    <IntroBtn>Contact me</IntroBtn>
             </Container>
             <Circle>circle</Circle>
+            <img src={myPhoto} alt="my photo"/>
         </IntroStyled>
     );
 };
@@ -25,9 +27,17 @@ const IntroStyled = styled.section`
   height: 100%;
   min-height: 100vh;
   background-color: #1E1E1E;
-  padding:45vh 0 10vh;
+  padding:40vh 0 10vh;
   font-family: "NEXT ART", sans-serif;
   position: relative;
+  
+  img{
+    width: 465.18px;
+    height: 674px;
+    position: absolute;
+    bottom: 0;
+    left:  58.5%;
+  }
     
   ${Container}{
     span{
@@ -41,6 +51,7 @@ const IntroStyled = styled.section`
       line-height: 82px;
     }
     p{
+      margin-top: 27px;
       display: block;
       max-width: 450px;
       font-family: "Poppins", sans-serif;
@@ -49,14 +60,25 @@ const IntroStyled = styled.section`
       line-height: 28px;
     }
   }
+  
+`
+const IntroBtn = styled.button`
+  margin-top: 27px;
+  padding: 13.5px 41px 12.5px;
+  background-color: #E2A100;
+  font-family: NEXT ART, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  cursor: pointer;
 `
 
 const Circle = styled.div`
   width: 575px;
   height: 575px;
   position: absolute;
-  right: 280px;
-  top: 320px;
+  left: 56%;
+  bottom: 1%;
   background-color: transparent;
   border: 67px solid #00C4F0;
   border-radius: 50%;
