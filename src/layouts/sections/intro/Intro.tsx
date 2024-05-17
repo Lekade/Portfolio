@@ -80,17 +80,17 @@ const Circle = styled.div`
   left: 56%;
   bottom: 1%;
   background-color: transparent;
-  border: 67px solid #00C4F0;
+  border: 67px solid #03E9F4;
   border-radius: 50%;
   color: transparent;
   font-size: 0;
   box-shadow:
-          0 0 4px rgba(0,193,236, 1),
-          0 0 4px rgba(0,193,236, 1) inset,
-          0 0 10px rgba(0,193,236, 1),
-          0 0 10px rgba(0,193,236, 1) inset,
-          0 0 20px rgba(0,193,236, 1),
-          0 0 20px rgba(0,193,236, 1) inset;
+          0 0 4px rgba(3,233,244, 1),
+          0 0 4px rgba(3,233,244, 1) inset,
+          0 0 10px rgba(3,233,244, 1),
+          0 0 10px rgba(3,233,244, 1) inset,
+          0 0 20px rgba(3,233,244, 1),
+          0 0 20px rgba(3,233,244, 1) inset;
 
   animation: ${CircleGlow} 4s ease-in-out infinite;
 `

@@ -3,32 +3,32 @@ import {keyframes} from "styled-components";
 export const CircleGlow = keyframes`
   0%{
     box-shadow:
-            0 0 4px rgba(0,193,236, 1),
-            0 0 4px rgba(0,193,236, 1) inset,
-            0 0 10px rgba(0,193,236, 1),
-            0 0 10px rgba(0,193,236, 1) inset,
-            0 0 20px rgba(0,193,236, 1),
-            0 0 20px rgba(0,193,236, 1) inset;
+            0 0 4px rgba(3,233,244, 1),
+            0 0 4px rgba(3,233,244, 1) inset,
+            0 0 10px rgba(3,233,244, 1),
+            0 0 10px rgba(3,233,244, 1) inset,
+            0 0 20px rgba(3,233,244, 1),
+            0 0 20px rgba(3,233,244, 1) inset;
   }
   50%{
     box-shadow:
-            0 0 4px rgba(0,193,236, 1),
-            0 0 4px rgba(0,193,236, 1) inset,
-            0 0 10px rgba(0,193,236, 1),
-            0 0 10px rgba(0,193,236, 1) inset,
-            0 0 20px rgba(0,193,236, 1),
-            0 0 20px rgba(0,193,236, 1) inset,
-            0 0 25px rgba(0,193,236, 1),
-            0 0 25px rgba(0,193,236, 1) inset;            
+            0 0 4px rgba(3,233,244, 1),
+            0 0 4px rgba(3,233,244, 1) inset,
+            0 0 10px rgba(3,233,244, 1),
+            0 0 10px rgba(3,233,244, 1) inset,
+            0 0 20px rgba(3,233,244, 1),
+            0 0 20px rgba(3,233,244, 1) inset,
+            0 0 25px rgba(3,233,244, 1),
+            0 0 25px rgba(3,233,244, 1) inset;            
   }
   0%{
     box-shadow:
-            0 0 4px rgba(0,193,236, 1),
-            0 0 4px rgba(0,193,236, 1) inset,
-            0 0 10px rgba(0,193,236, 1),
-            0 0 10px rgba(0,193,236, 1) inset,
-            0 0 20px rgba(0,193,236, 1),
-            0 0 20px rgba(0,193,236, 1) inset;
+            0 0 4px rgba(3,233,244, 1),
+            0 0 4px rgba(3,233,244, 1) inset,
+            0 0 10px rgba(3,233,244, 1),
+            0 0 10px rgba(3,233,2446, 1) inset,
+            0 0 20px rgba(3,233,244, 1),
+            0 0 20px rgba(3,233,244, 1) inset;
   }
 `
 
@@ -37,7 +37,7 @@ export const AnimateSurfaceCube = keyframes`
     transform: translateX(0);
   }
   100%{
-    transform: translateX(-150px);
+    transform: translateX(-200px);
   }
 `
 

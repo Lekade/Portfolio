@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from "styled-components";
 
-export const Menu = (props:{menuItems:Array<string>}) => {
+export const MobileMenu = (props:{menuItems:Array<string>}) => {
     return (
-        <StyledMenu>
+        <StyledMobileMenu>
             <ul>
                 {props.menuItems.map((item:string, index:number) => <li key={index}>
-                        <a href="#">{item}</a>
-                    </li>)}
+                    <a href="#">{item}</a>
+                </li>)}
             </ul>
-        </StyledMenu>
+        </StyledMobileMenu>
     );
 };
 
-const StyledMenu = styled.nav`
-  display: flex;
+const StyledMobileMenu = styled.nav`
+  display: none;
   align-items: center;
   ul{
     display: flex;

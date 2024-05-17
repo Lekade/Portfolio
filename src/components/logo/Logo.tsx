@@ -20,6 +20,6 @@ const LogoText = styled.span`
     font-family: "NEXT ART", sans-serif;
     font-size: 40px;
     font-weight: 600;
-    color: #00C1EC;
+    color: #03E9F4;
   }
 `

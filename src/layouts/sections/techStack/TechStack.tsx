@@ -6,7 +6,13 @@ import {AnimateSurfaceCube, TurningShakingCube} from "../../../assets/animations
 import {Icon} from "../../../components/icon/Icon";
 
 
-const skilsLeft = [
+type skillsType = {
+    id: string,
+    heading: string,
+
+}
+
+const skillsLeft  = [
     {
         id: 'html',
         heading: 'html'
@@ -44,7 +50,7 @@ const skilsLeft = [
         heading:'npm'
     },
 ]
-const skilsRight = [
+const skillsRight = [
     {
         id: 'react',
         heading: 'react'
@@ -89,7 +95,7 @@ export const TechStack = () => {
                 <Title content={"My Tech Stack"}/>
             <Container>
                 <Icons>
-                    {skilsLeft.map((skill, number) => <li key={number}>
+                    {skillsLeft.map((skill, index) => <li key={index}>
                         <Icon id={skill.id} />
                         <h4>{skill.heading}</h4>
                     </li>)}
@@ -100,7 +106,7 @@ export const TechStack = () => {
                     </Cube>
                 </CubeBox>
                 <Icons>
-                    {skilsRight.map(skill => <li>
+                    {skillsRight.map(skill => <li>
                         <Icon id={skill.id} />
                         <h4>{skill.heading}</h4>
                     </li>)}
@@ -159,21 +165,20 @@ const Icons = styled.ul`
 `
 
 const CubeBox = styled.div`
-  width: 35%;
-  height: 35%;
+  width: 100%;
   position: absolute;
   transform: rotate(-35deg);
-  left:calc(55% - 24%);
-  top:calc(50% - 5%);
+  left: -2%;
+  top:45%;
   z-index: 1;
 `
 const Cube = styled.div`
   position: relative;
-  left: -150px;
+  left: -200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(100% + 300px);
+  width: calc(100% + 400px);
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
   animation: ${AnimateSurfaceCube} 1.5s ease-in-out infinite;
 
@@ -182,15 +187,15 @@ const Cube = styled.div`
     color: transparent;
     font-size: 0;
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background: #03e9f4;
-    box-shadow:  0 0 4px rgba(0,193,236, 1),
-    0 0 15px rgba(0,193,236, 1),
-    0 0 30px rgba(0,193,236, 1),
-    0 0 60px rgba(0,193,236, 1),
-    0 0 80px rgba(0,193,236, 0.5),
-    0 0 120px rgba(0,193,236, 0.5);
+    box-shadow:  0 0 5px rgba(3, 233, 244, 1),
+    0 0 25px rgba(3, 233, 244, 1),
+    0 0 50px rgba(3, 233, 244, 1),
+    0 0 100px rgba(3, 233, 244, 1),
+    0 0 200px rgba(3, 233, 244, 0.5),
+    0 0 300px rgba(3, 233, 244, 0.5);
     transform-origin: bottom right;
     animation: ${TurningShakingCube} 1.5s ease-in-out infinite;
     
