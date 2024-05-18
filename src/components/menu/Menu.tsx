@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from "styled-components";
+import {Theme} from "../../assets/Theme";
 
 export const Menu = (props:{menuItems:Array<string>}) => {
     return (
         <StyledMenu>
-            <ul>
+            <MenuList>
                 {props.menuItems.map((item:string, index:number) => <li key={index}>
                         <a href="#">{item}</a>
                     </li>)}
-            </ul>
+            </MenuList>
         </StyledMenu>
     );
 };
@@ -16,10 +17,15 @@ export const Menu = (props:{menuItems:Array<string>}) => {
 const StyledMenu = styled.nav`
   display: flex;
   align-items: center;
-  ul{
-    display: flex;
-    gap: 40px;
+  max-width: 600px;
+  @media ${Theme.media.large}{
+    display: none;
   }
+`
+const MenuList  = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
   a{
     color: #fff;
     font-size: 20px;

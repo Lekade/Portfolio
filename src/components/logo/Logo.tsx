@@ -1,14 +1,23 @@
 import React from 'react';
 import styled from "styled-components";
+import {Theme} from "../../assets/Theme";
 
 export const Logo = () => {
-    return <a href="#">
+    return <StyledLogo href="#">
         <LogoText>
             <span>L</span>
             ekade
         </LogoText>
-    </a>
+    </StyledLogo>
 };
+
+
+
+const StyledLogo = styled.a`
+  display: flex;
+  align-items: center;
+  z-index: 999;
+`
 
 const LogoText = styled.span`
   font-family: "Poppins", sans-serif;
@@ -21,5 +30,11 @@ const LogoText = styled.span`
     font-size: 40px;
     font-weight: 600;
     color: #03E9F4;
+  }
+  @media ${Theme.media.large}{
+    font-size: 15px;
+    span{
+      font-size: 35px;
+    }
   }
 `
