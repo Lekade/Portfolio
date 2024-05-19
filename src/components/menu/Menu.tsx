@@ -17,15 +17,15 @@ export const Menu = (props:{menuItems:Array<string>}) => {
 const StyledMenu = styled.nav`
   display: flex;
   align-items: center;
-  max-width: 600px;
-  @media ${Theme.media.large}{
+  max-width: 80%;
+  @media ${Theme.media.medium}{
     display: none;
   }
 `
 const MenuList  = styled.ul`
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
   a{
     color: #fff;
     font-size: 20px;

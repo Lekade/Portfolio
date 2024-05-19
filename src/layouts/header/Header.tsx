@@ -30,7 +30,7 @@ const StyledHeader = styled.header`
   left: 0;
   background-color: #1E1E1E;
   z-index: 999;
-  @media ${Theme.media.large}{
+  @media ${Theme.media.medium}{
     padding: 0;
     min-height: 70px;
   }
@@ -40,7 +40,7 @@ const StyledHeader = styled.header`
     justify-content: space-between;
     z-index: 999;
     background-color: #1E1E1E;
-    @media ${Theme.media.large}{
+    @media ${Theme.media.medium}{
       position: relative;
       min-height: 70px;
     }

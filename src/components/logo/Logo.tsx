@@ -31,7 +31,7 @@ const LogoText = styled.span`
     font-weight: 600;
     color: #03E9F4;
   }
-  @media ${Theme.media.large}{
+  @media ${Theme.media.medium}{
     font-size: 15px;
     span{
       font-size: 35px;

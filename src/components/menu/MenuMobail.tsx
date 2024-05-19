@@ -21,7 +21,7 @@ export const MobileMenu = (props:{menuItems:Array<string>}) => {
 const StyledMobileMenu = styled.nav`
   display: none;
   align-items: center;
-  @media ${Theme.media.large}{
+  @media ${Theme.media.medium}{
     display: block;
   }
 `
@@ -100,9 +100,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
       ${props => props.isOpen && css<{isOpen: boolean}>`
         transform: rotate(45deg) translateY(0);
         transition: 0.3s;
-      `}
-      
-      
+      `}      
     }
     &::before{
       content: "";
