@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {Theme} from "../../assets/Theme";
 
 type TitlePropsType = {
     content: string
@@ -22,4 +23,8 @@ const StyledTitle = styled.h2`
   font-size: 48px;
   font-weight: 400;
   color: #fff;
+
+  @media ${Theme.media.medium}{
+    font-size: 38px;
+  }
 `

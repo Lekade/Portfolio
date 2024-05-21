@@ -4,6 +4,7 @@ import {Title} from "../../../components/title/Title";
 import {Subtitle} from "../../../components/subtitle/Subtitle";
 import styled from "styled-components";
 import {Project} from "./Project";
+import {Theme} from "../../../assets/Theme";
 
 export const Projects = () => {
     return (
@@ -46,7 +47,15 @@ const StyledProject = styled.section`
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      column-gap: 20px;
       row-gap: 65px;
       padding-top: 113px;
     }
+  @media ${Theme.media.extra}{
+    ul{
+      justify-content: space-around;
+      padding-top: 80px;
+    }
+  }
+
 `

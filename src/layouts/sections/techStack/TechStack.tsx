@@ -3,16 +3,12 @@ import {Title} from "../../../components/title/Title";
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
 import {AnimateSurfaceCube, TurningShakingCube} from "../../../assets/animations/Animation";
-import {Icon} from "../../../components/icon/Icon";
+import Skills from "./skills/Skills";
+import {Theme} from "../../../assets/Theme";
 
 
-type skillsType = {
-    id: string,
-    heading: string,
 
-}
-
-const skillsLeft  = [
+const skillsLeft: { id: string; heading: string }[]  = [
     {
         id: 'html',
         heading: 'html'
@@ -50,7 +46,7 @@ const skillsLeft  = [
         heading:'npm'
     },
 ]
-const skillsRight = [
+const skillsRight:{ id: string; heading: string }[] = [
     {
         id: 'react',
         heading: 'react'
@@ -94,23 +90,13 @@ export const TechStack = () => {
         <StyledTechStack>
                 <Title content={"My Tech Stack"}/>
             <Container>
-                <Icons>
-                    {skillsLeft.map((skill, index) => <li key={index}>
-                        <Icon id={skill.id} />
-                        <h4>{skill.heading}</h4>
-                    </li>)}
-                </Icons>
+                <Skills skillsItems={skillsLeft}/>
                 <CubeBox>
                     <Cube>
                         <div>cube</div>
                     </Cube>
                 </CubeBox>
-                <Icons>
-                    {skillsRight.map(skill => <li>
-                        <Icon id={skill.id} />
-                        <h4>{skill.heading}</h4>
-                    </li>)}
-                </Icons>
+                <Skills skillsItems={skillsRight} />
             </Container>
         </StyledTechStack>
     );
@@ -128,39 +114,15 @@ const StyledTechStack = styled.section`
     display: flex;
     justify-content: space-around;
   }
-`
+  @media ${Theme.media.large}{
+    padding-bottom: 100px;
+  }
+  @media screen and (max-width: 600px){
+    ${Container}{
+      display: inline-flex;
+      flex-direction: column;
+    }
 
-const Icons = styled.ul`
-  padding-top: 150px;
-  max-width: 500px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  z-index: 2;
-  li{
-    width: 150px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: transparent;
-    cursor: pointer;
-    webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    transition: .6s;
-    h4{
-      margin-top: 15px;
-      font-family: The Nautigal, cursive;
-      font-size: 27px;
-      text-transform: capitalize;
-    }
-    &:hover{
-      webkit-filter: grayscale(0%);
-      filter: grayscale(0%);
-      webkit-transform: scale(1.6);
-      transform: scale(1.6);
-    }
   }
 `
 
@@ -171,6 +133,10 @@ const CubeBox = styled.div`
   left: -2%;
   top:45%;
   z-index: 1;
+  @media screen and (max-width: 600px){
+    display: none;
+  }
+  
 `
 const Cube = styled.div`
   position: relative;

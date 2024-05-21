@@ -57,18 +57,10 @@ const IntroStyled = styled.section`
     }
   }
 
-  @media ${Theme.media.extra}{
+  @media screen and (max-width: 1050px){
     ${Container} {
-      span {
-        font-size: 38px;
-      }
-
       h1 {
-        font-size: 60px;
-      }
-
-      p {
-        font-size: 20px;
+        font-size: 68px;
       }
     }
   }
@@ -89,7 +81,7 @@ const IntroStyled = styled.section`
     }
   }
 
-  @media screen and (max-height:889px){
+  @media ${Theme.media.medium} and (max-height:889px) {
     padding: 15vh 0 25px;
     ${Container}{
       span {
@@ -135,7 +127,7 @@ const IntroBtn = styled.button`
   @media ${Theme.media.large}{
     margin-top: 60px;
   }
-  @media screen and (max-height:840px){
+  @media ${Theme.media.medium} and (max-height:840px) {
     margin-top: 10px;
   }
 `
