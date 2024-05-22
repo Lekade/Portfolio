@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
 import {Theme} from "../../assets/Theme";
+import {animateScroll as scroll} from 'react-scroll';
 
 export const Logo = () => {
-    return <StyledLogo href="#">
-        <LogoText>
+    return <StyledLogo>
+        <LogoText  onClick={() => {scroll.scrollToTop()}}>
             <span>L</span>
             ekade
         </LogoText>
@@ -17,6 +18,7 @@ const StyledLogo = styled.a`
   display: flex;
   align-items: center;
   z-index: 999;
+  cursor: pointer;
 `
 
 const LogoText = styled.span`

@@ -31,9 +31,9 @@ const socialIcon:{id:string, link:string, width:string, height:string}[] = [
 ]
 
 
-export const Contact = () => {
+export const Contacts = () => {
     return (
-        <StyledContact>
+        <StyledContact id="contacts">
             <Container>
                 <ContactInfo>
                     <Slogan>Let’s<br/> Connect</Slogan>
@@ -56,8 +56,9 @@ export const Contact = () => {
 
 const StyledContact = styled.section`
   width: 100%;
-  padding: 100px 0;
-  background-color: #030303;
+  min-height: 100vh;
+  padding: 150px 0;
+  background-color: #090909;
   ${Container}{
     display: flex;
     justify-content: space-between;
@@ -93,6 +94,7 @@ const SocialLinks = styled.ul`
   display: flex;
   @media screen and (max-width: 1070px){
     justify-content: space-between;
+    padding-right: 40px;
   }
   li{
     width: 25px;
@@ -110,6 +112,6 @@ const SocialLinks = styled.ul`
   }
   
   a{
-    color:#03E9F4;
+    color:#E2A100;
   }
 `

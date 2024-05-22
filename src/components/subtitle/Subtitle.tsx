@@ -21,5 +21,5 @@ const StyledTitleText = styled.span`
   font-family: Poppins, sans-serif;
   font-size: 32px;
   font-weight: 700;
-  color: #A7A7A7;
+  color: #E2A100;
 `

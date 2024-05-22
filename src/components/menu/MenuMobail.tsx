@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import styled, {css} from "styled-components";
 import {Theme} from "../../assets/Theme";
+import {MenuPropsType} from "./Menu";
+import {Link} from "react-scroll";
 
-export const MobileMenu = (props:{menuItems:Array<string>}) => {
+export const MobileMenu = (props:MenuPropsType) => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
     return (
@@ -10,8 +12,13 @@ export const MobileMenu = (props:{menuItems:Array<string>}) => {
             <BurgerButton onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}><span>button menu</span></BurgerButton>
 
             <MenuListPopup isOpen={isOpen}>
-                {props.menuItems.map((item:string, index:number) => <li key={index}>
-                    <a href="#">{item}</a>
+                {props.menuItems.map((item, index:number) => <li key={index}>
+                    <NavLink
+                        activeClass="active"
+                        to={item.href}
+                        smooth={true}
+                        spy={true}
+                    >{item.title}</NavLink>
                 </li>)}
             </MenuListPopup>
         </StyledMobileMenu>
@@ -48,15 +55,23 @@ const MenuListPopup  = styled.ul<{isOpen: boolean}>`
     bottom: 0;
     z-index: 99;
     transition: 0.6s;
-  `}
-    
-  
+  `}  
   a{
     color: #fff;
     font-size: 30px;
     font-weight: 500;
   }
 `
+const NavLink = styled(Link)`
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  &.active{
+    color: #E29700;
+  }
+`
+
 const BurgerButton = styled.button<{isOpen: boolean}>`
   width: 70px;
   height: 70px;

@@ -17,7 +17,7 @@ const StyledFooter = styled.footer`
   font-weight: 500;
   line-height: 180%;
   letter-spacing: 0.3px;
-  background-color: #030303;
+  background-color: #090909;
   color: #808080;
   span > span{
     color: #fff;

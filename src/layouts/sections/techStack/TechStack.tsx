@@ -87,7 +87,7 @@ const skillsRight:{ id: string; heading: string }[] = [
 
 export const TechStack = () => {
     return (
-        <StyledTechStack>
+        <StyledTechStack id="techStack">
                 <Title content={"My Tech Stack"}/>
             <Container>
                 <Skills skillsItems={skillsLeft}/>

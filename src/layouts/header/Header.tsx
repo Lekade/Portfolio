@@ -6,7 +6,12 @@ import {Container} from "../../components/container/Container";
 import styled from "styled-components";
 import {Theme} from "../../assets/Theme";
 
-const menuItems:Array<string>  = ['Home', 'Tech Stack', 'Projects', 'Contact']
+const menuItems  = [
+    {title: 'Home', href: 'home'},
+    {title: 'Tech Stack', href: 'techStack'},
+    {title: 'Projects', href: 'projects'},
+    {title: 'Contacts', href: 'contacts'}
+]
 
 export const Header = () => {
     return (

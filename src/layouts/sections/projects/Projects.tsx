@@ -8,7 +8,7 @@ import {Theme} from "../../../assets/Theme";
 
 export const Projects = () => {
     return (
-        <StyledProject>
+        <StyledProject id="projects">
             <Container>
                 <Title content="Projects"/>
                 <Subtitle content="Things I’ve built so far"/>

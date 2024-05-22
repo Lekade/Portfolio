@@ -3,7 +3,7 @@ import {Header} from "./layouts/header/Header";
 import {Intro} from "./layouts/sections/intro/Intro";
 import {TechStack} from "./layouts/sections/techStack/TechStack";
 import {Projects} from "./layouts/sections/projects/Projects";
-import {Contact} from "./layouts/sections/contact/Contact";
+import {Contacts} from "./layouts/sections/contact/Contacts";
 import {Footer} from "./layouts/footer/Footer";
 
 
@@ -15,7 +15,7 @@ function App() {
                 <Intro/>
                 <TechStack/>
                 <Projects/>
-                <Contact/>
+                <Contacts/>
             </main>
             <Footer/>
         </div>

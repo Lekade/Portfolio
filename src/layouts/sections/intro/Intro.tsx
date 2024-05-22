@@ -8,7 +8,7 @@ import {Theme} from "../../../assets/Theme";
 
 export const Intro = () => {
     return (
-        <IntroStyled>
+        <IntroStyled id='home'>
             <Circle>
                 <img src={myFacePhoto} alt="my face"/>
             </Circle>
@@ -69,6 +69,9 @@ const IntroStyled = styled.section`
     padding: 20vh 0 50px;
     ${Container}{
       text-align: center;
+      span{
+        font-size: 38px;
+      }
       h1 {
         font-size: 38px;
       }
@@ -117,12 +120,21 @@ const MyPhoto = styled.img`
 const IntroBtn = styled.button`
   margin-top: 27px;
   padding: 13.5px 41px 12.5px;
-  background-color: #E2A100;
+  background-color: #E29700;
+  box-shadow: 0 2px 13px 0 rgba(226, 158, 0, 0.48);
+  border: 1px solid transparent;
   font-family: NEXT ART, sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
   cursor: pointer;
+  transition: 0.6s;
+  &:hover{
+    transition: 0.6s;
+    border: 1px solid #E2A100;
+    background-color: transparent;
+    color: #E29700;
+  }
 
   @media ${Theme.media.large}{
     margin-top: 60px;

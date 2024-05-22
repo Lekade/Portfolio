@@ -10,7 +10,6 @@ type propsSkillsType = {
     }[]
 }
 
-
 const Skills = (props: propsSkillsType) => {
     return (
         <StyledSkills>
