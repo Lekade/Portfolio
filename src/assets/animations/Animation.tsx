@@ -63,12 +63,12 @@ export const TurningShakingCube = keyframes`
 `
 export const btnFormAnimation = keyframes`
 0%{
-  margin-right: 40px;
+  right: 0;
 }
 50%{
-margin-right: 20px;
+  right: 20px;
 }
 0%{
-margin-right: 40px;
+  right: 0;
 }
 `
