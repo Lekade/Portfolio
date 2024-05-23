@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
 import {Icon} from "../../../components/icon/Icon";
 import {ContactForm} from "./сontactForm/ContactForm";
+import {Theme} from "../../../assets/styles/Theme";
 
 const socialIcon:{id:string, link:string, width:string, height:string}[] = [
     {
@@ -56,15 +57,18 @@ export const Contacts = () => {
 
 const StyledContact = styled.section`
   width: 100%;
-  min-height: 100vh;
-  padding: 150px 0;
-  background-color: #090909;
+  min-height: 90vh;
+  padding: ${Theme.section.paddingDesktop} 0;
+  background-color: ${Theme.colors.tertiary};
   ${Container}{
     display: flex;
     justify-content: space-between;
     @media screen and (max-width: 1070px){
       flex-direction: column;
     }
+  }
+  @media ${Theme.media.medium}{
+    padding: ${Theme.section.paddingMobile} 0;
   }
 `
 
@@ -112,6 +116,6 @@ const SocialLinks = styled.ul`
   }
   
   a{
-    color:#E2A100;
+    color:${Theme.colors.accent2};
   }
 `

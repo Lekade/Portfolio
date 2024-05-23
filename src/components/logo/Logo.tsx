@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Theme} from "../../assets/Theme";
+import {Theme} from "../../assets/styles/Theme";
 import {animateScroll as scroll} from 'react-scroll';
 
 export const Logo = () => {
@@ -22,16 +22,16 @@ const StyledLogo = styled.a`
 `
 
 const LogoText = styled.span`
-  font-family: "Poppins", sans-serif;
+  font-family: Popins, sans-serif;
   letter-spacing: 2px;
   font-size: 20px;
   font-weight: 400;
-  color: #fff;
+  color: ${Theme.colors.font};
   span{
     font-family: "NEXT ART", sans-serif;
     font-size: 40px;
     font-weight: 600;
-    color: #03E9F4;
+    color: ${Theme.colors.accent};
   }
   @media ${Theme.media.medium}{
     font-size: 15px;

@@ -4,7 +4,7 @@ import {Container} from "../../../components/container/Container";
 import {CircleGlow} from "../../../assets/animations/Animation";
 import myPhoto from "../../../assets/images/myPhoto.png"
 import myFacePhoto from "../../../assets/images/myFacePhoto.png"
-import {Theme} from "../../../assets/Theme";
+import {Theme} from "../../../assets/styles/Theme";
 
 export const Intro = () => {
     return (
@@ -13,11 +13,11 @@ export const Intro = () => {
                 <img src={myFacePhoto} alt="my face"/>
             </Circle>
             <Container>
-                    <span>Hello</span>
-                    <h1>I’m Denis <br/> Kasperovich</h1>
-                    <p>I've been doing web design, front-end and back-end development
+                    <InfoTitleTop>Hello</InfoTitleTop>
+                    <Title>I’m Denis <br/> Kasperovich</Title>
+                    <IntroText>I've been doing web design, front-end and back-end development
                         for a year now. Do you need a website design, site layout,
-                        or maybe a turnkey website? Then contact me</p>
+                        or maybe a turnkey website? Then contact me</IntroText>
                     <IntroBtn>Contact me</IntroBtn>
             </Container>
             <MyPhoto src={myPhoto} alt="my photo"/>
@@ -30,79 +30,64 @@ const IntroStyled = styled.section`
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  background-color: #1E1E1E;
+  background-color: ${Theme.colors.primaryBg};
   font-family: "NEXT ART", sans-serif;
   position: relative;
   padding:calc(((100vh - 462px)/3*2) + 0px) 0 calc(((100vh - 462px)/3) - 0px);
-    
-  ${Container}{
-    span{
-      font-size: 48px;
-      font-weight: 600;
-      line-height: 1.2;
-    }
-    h1{
-      font-size: 72px;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-    p{
-      margin-top: 27px;
-      display: block;
-      max-width: 450px;
-      font-family: "Poppins", sans-serif;
-      font-size: 21px;
-      font-weight: 400;
-      line-height: 1.3;
-    }
-  }
-
-  @media screen and (max-width: 1050px){
-    ${Container} {
-      h1 {
-        font-size: 68px;
-      }
-    }
-  }
-
-  @media ${Theme.media.large}{
+  @media ${Theme.media.large} {
     padding: 20vh 0 50px;
-    ${Container}{
+    ${Container} {
       text-align: center;
-      span{
-        font-size: 38px;
-      }
-      h1 {
-        font-size: 38px;
-      }
-
-      p {
-        max-width: 600px;
-        margin: 30px auto 0;
-        font-size: 20px;
-      }
     }
   }
-
   @media ${Theme.media.medium} and (max-height:889px) {
     padding: 15vh 0 25px;
-    ${Container}{
-      span {
-        font-size: 24px;
-      }
-      
-      h1 {
-        font-size: 24px;
-      }
-
-      p {
-        margin: 15px auto 0;
-        font-size: 18px;
-      }
-    }
   }
 `
-
+const InfoTitleTop = styled.span`
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  @media ${Theme.media.large}{
+    font-size: 38px;
+  }
+  @media ${Theme.media.medium} and (max-height:889px) {
+    font-size: 24px;
+  }
+`
+const Title = styled.h1`
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+  @media screen and (max-width: 1050px) {
+    font-size: 68px;
+  }
+  @media ${Theme.media.large} {
+    font-size: 38px;
+  }
+  @media ${Theme.media.medium} and (max-height: 889px) {
+    font-size: 24px;
+  }
+`
+const IntroText = styled.p`
+  margin-top: 27px;
+  display: block;
+  max-width: 450px;
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.3;
+  @media ${Theme.media.large}{
+    max-width: 600px;
+    margin: 30px auto 0;
+    font-size: 20px;
+  }
+  @media ${Theme.media.medium} and (max-height:889px) {
+    margin: 15px auto 0;
+    font-size: 18px;
+  }
+  
+`
 const MyPhoto = styled.img`
   width: 450px;
   position: absolute;
@@ -120,7 +105,7 @@ const MyPhoto = styled.img`
 const IntroBtn = styled.button`
   margin-top: 27px;
   padding: 13.5px 41px 12.5px;
-  background-color: #E29700;
+  background-color: ${Theme.colors.accent2};
   box-shadow: 0 2px 13px 0 rgba(226, 158, 0, 0.48);
   border: 1px solid transparent;
   font-family: NEXT ART, sans-serif;
@@ -131,9 +116,9 @@ const IntroBtn = styled.button`
   transition: 0.6s;
   &:hover{
     transition: 0.6s;
-    border: 1px solid #E2A100;
+    border: 1px solid ${Theme.colors.accent2};
     background-color: transparent;
-    color: #E29700;
+    color: ${Theme.colors.accent2};
   }
 
   @media ${Theme.media.large}{
@@ -151,17 +136,17 @@ const Circle = styled.div`
   left: 56%;
   bottom: 4%;
   background-color: transparent;
-  border: 67px solid #03E9F4;
+  border: 67px solid ${Theme.colors.accent};
   border-radius: 50%;
   color: transparent;
   font-size: 0;
   box-shadow:
-          0 0 4px rgba(3,233,244, 1),
-          0 0 4px rgba(3,233,244, 1) inset,
-          0 0 10px rgba(3,233,244, 1),
-          0 0 10px rgba(3,233,244, 1) inset,
-          0 0 40px rgba(3,233,244, 1),
-          0 0 40px rgba(3,233,244, 1) inset;
+          0 0 4px ${Theme.colors.accent},
+          0 0 4px ${Theme.colors.accent} inset,
+          0 0 10px ${Theme.colors.accent},
+          0 0 10px ${Theme.colors.accent} inset,
+          0 0 40px ${Theme.colors.accent},
+          0 0 40px ${Theme.colors.accent} inset;
 
   animation: ${CircleGlow} 4s ease-in-out infinite;
 
@@ -178,7 +163,7 @@ const Circle = styled.div`
     height: 240px;
     position: static;
     margin: 0 auto 40px;
-    border: 10px solid #03E9F4;
+    border: 10px solid ${Theme.colors.accent};
     overflow: hidden;
 
     img{

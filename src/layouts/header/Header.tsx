@@ -4,7 +4,7 @@ import {Menu} from "../../components/menu/Menu";
 import {MobileMenu} from "../../components/menu/MenuMobail";
 import {Container} from "../../components/container/Container";
 import styled from "styled-components";
-import {Theme} from "../../assets/Theme";
+import {Theme} from "../../assets/styles/Theme";
 
 const menuItems  = [
     {title: 'Home', href: 'home'},
@@ -33,7 +33,7 @@ const StyledHeader = styled.header`
   top: 0;
   right: 0;
   left: 0;
-  background-color: #1E1E1E;
+  background-color: ${Theme.colors.primaryBg};
   z-index: 999;
   @media ${Theme.media.medium}{
     padding: 0;
@@ -44,7 +44,7 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     z-index: 999;
-    background-color: #1E1E1E;
+    background-color: ${Theme.colors.primaryBg};
     @media ${Theme.media.medium}{
       position: relative;
       min-height: 70px;

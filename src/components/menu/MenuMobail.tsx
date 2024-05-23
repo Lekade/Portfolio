@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled, {css} from "styled-components";
-import {Theme} from "../../assets/Theme";
+import {Theme} from "../../assets/styles/Theme";
 import {MenuPropsType} from "./Menu";
 import {Link} from "react-scroll";
 
@@ -18,6 +18,7 @@ export const MobileMenu = (props:MenuPropsType) => {
                         to={item.href}
                         smooth={true}
                         spy={true}
+                        offset={-70}
                     >{item.title}</NavLink>
                 </li>)}
             </MenuListPopup>
@@ -39,7 +40,6 @@ const MenuListPopup  = styled.ul<{isOpen: boolean}>`
   flex-wrap: wrap;
   align-items: center;
   gap: 40px;
-  
   background-color: rgba(30,30,30, 0.98);
   
   position: fixed;
@@ -55,20 +55,15 @@ const MenuListPopup  = styled.ul<{isOpen: boolean}>`
     bottom: 0;
     z-index: 99;
     transition: 0.6s;
-  `}  
-  a{
-    color: #fff;
-    font-size: 30px;
-    font-weight: 500;
-  }
+  `}
 `
 const NavLink = styled(Link)`
-  color: #fff;
+  color: ${Theme.colors.font};
   font-size: 30px;
   font-weight: 500;
   cursor: pointer;
   &.active{
-    color: #E29700;
+    color: ${Theme.colors.accent2};
   }
 `
 

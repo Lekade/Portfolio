@@ -1,10 +1,16 @@
 export const Theme = {
     colors : {
+        primaryBg: '#1E1E1E',
+        secondaryBg: '#101010',
+        tertiary: '#090909',
+        accent: '#03E9F4',
+        accent2: '#E29700',
+        font: '#ffffff'
 
     },
-
-    font:{
-
+    section:{
+      paddingDesktop:'150px',
+      paddingMobile: '100px'
     },
 
     media:{

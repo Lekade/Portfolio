@@ -1,0 +1,14 @@
+.alice-carousel{
+    padding-top: 70px;
+    display: none;
+}
+
+.alice-carousel__dots-item:not(.__custom):hover, .alice-carousel__dots-item:not(.__custom).__active{
+    background-color: #E29700;
+}
+
+@media screen and  (max-width: 820px ){
+    .alice-carousel{
+        display: block;
+    }
+}

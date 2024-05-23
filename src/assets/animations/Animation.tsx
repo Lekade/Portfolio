@@ -1,34 +1,35 @@
 import {keyframes} from "styled-components";
+import {Theme} from "../styles/Theme";
 
 export const CircleGlow = keyframes`
   0%{
     box-shadow:
-            0 0 4px rgba(3,233,244, 1),
-            0 0 4px rgba(3,233,244, 1) inset,
-            0 0 10px rgba(3,233,244, 1),
-            0 0 10px rgba(3,233,244, 1) inset,
-            0 0 40px rgba(3,233,244, 1),
-            0 0 40px rgba(3,233,244, 1) inset;
+            0 0 4px ${Theme.colors.accent},
+            0 0 4px ${Theme.colors.accent} inset,
+            0 0 10px ${Theme.colors.accent},
+            0 0 10px ${Theme.colors.accent} inset,
+            0 0 40px ${Theme.colors.accent},
+            0 0 40px ${Theme.colors.accent} inset;
   }
   50%{
     box-shadow:
-            0 0 4px rgba(3,233,244, 1),
-            0 0 4px rgba(3,233,244, 1) inset,
-            0 0 10px rgba(3,233,244, 1),
-            0 0 10px rgba(3,233,244, 1) inset,
-            0 0 40px rgba(3,233,244, 1),
-            0 0 40px rgba(3,233,244, 1) inset,
-            0 0 60px rgba(3,233,244, 1),
-            0 0 60px rgba(3,233,244, 1) inset;            
+            0 0 4px ${Theme.colors.accent},
+            0 0 4px ${Theme.colors.accent} inset,
+            0 0 10px ${Theme.colors.accent},
+            0 0 10px ${Theme.colors.accent} inset,
+            0 0 40px ${Theme.colors.accent},
+            0 0 40px ${Theme.colors.accent} inset,
+            0 0 60px ${Theme.colors.accent},
+            0 0 60px ${Theme.colors.accent} inset;            
   }
   0%{
     box-shadow:
-            0 0 4px rgba(3,233,244, 1),
-            0 0 4px rgba(3,233,244, 1) inset,
-            0 0 10px rgba(3,233,244, 1),
-            0 0 10px rgba(3,233,2446, 1) inset,
-            0 0 40px rgba(3,233,244, 1),
-            0 0 40px rgba(3,233,244, 1) inset;
+            0 0 4px ${Theme.colors.accent},
+            0 0 4px ${Theme.colors.accent} inset,
+            0 0 10px ${Theme.colors.accent},
+            0 0 10px ${Theme.colors.accent} inset,
+            0 0 40px ${Theme.colors.accent},
+            0 0 40px ${Theme.colors.accent} inset;
   }
 `
 

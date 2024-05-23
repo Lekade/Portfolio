@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Theme} from "../../assets/Theme";
+import {Theme} from "../../assets/styles/Theme";
 import {Link} from "react-scroll";
 
 export type MenuPropsType = {
@@ -53,11 +53,11 @@ const MenuList = styled.ul`
 `
 
 const NavLink = styled(Link)`
-  color: #fff;
+  color: ${Theme.colors.font};
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   &.active{
-    color: #E29700;
+    color: ${Theme.colors.accent2};
   }
 `
