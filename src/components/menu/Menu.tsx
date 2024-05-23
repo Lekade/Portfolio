@@ -22,6 +22,7 @@ export const Menu = (props:MenuPropsType) => {
                             smooth={true}
                             spy={true}
                             offset={-90}
+                            href='#'
                         >{item.title}</NavLink>
                     </li>)}
             </MenuList>

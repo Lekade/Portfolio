@@ -19,6 +19,7 @@ export const MobileMenu = (props:MenuPropsType) => {
                         smooth={true}
                         spy={true}
                         offset={-70}
+                        href='#'
                     >{item.title}</NavLink>
                 </li>)}
             </MenuListPopup>

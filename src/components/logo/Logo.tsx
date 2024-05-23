@@ -4,8 +4,8 @@ import {Theme} from "../../assets/styles/Theme";
 import {animateScroll as scroll} from 'react-scroll';
 
 export const Logo = () => {
-    return <StyledLogo>
-        <LogoText  onClick={() => {scroll.scrollToTop()}}>
+    return <StyledLogo onClick={() => {scroll.scrollToTop()}} href='#'>
+        <LogoText>
             <span>L</span>
             ekade
         </LogoText>
